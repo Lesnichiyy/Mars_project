@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Форма для Рояла</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+	<form class="form" autocomplete="off">
+		<div class="form__title">
+			<input class="inputTitle" type="text">
+			<span class="spn">Номер заказа</span>
+		</div>		
+
+		<h3 class="title">Данные о маршруте</h3>
+
+		<div class="form__main">
+			<div class="form__main_item">
+				<select class="inputTitle">
+					<option value="active">Авалон (Лобня)</option>
+					<option value="zavod">Завод RC</option>
+					<option value="sclad">Склад RC</option>					
+				  </select>
+				<span class="spn">Поставщик (место и адрес погрузки)</span>
+			</div>
+			<div class="mid">
+				<input class="num" type="number" min="1" max="99">
+				<span class="spn_date">Количество паллет</span>
+			</div>
+			<div class="form__main_item">
+				<select class="inputTitle">
+					<option value="active">Завод RC</option>
+					<option value="zavod">Авалон (Лобня)</option>
+					<option value="sclad">Склад RC</option>					
+				  </select>
+				<span class="spn_date">Грузополучатель (место и адрес выгрузки)</span>
+			</div>
+		</div>
+
+		<h3 class="title">Расчётное время</h3>
+
+		<div class="form__date">
+			<div class="form__date_item">
+				<div class="date_item">
+					<input class="date" type="date">
+					<span class="spn_date">Дата</span>
+				</div>
+				<div class="time_item">
+					<input class="time" type="time" name="time">
+					<span class="spn_date">Время</span>
+				</div>
+
+			</div>
+			<div class="form__date_item">
+				<div class="date_item">
+					<input class="date" type="date">
+					<span class="spn_date">Дата</span>
+				</div>
+				<div class="date_item">
+					<input class="time" type="time" name="time">
+					<span class="spn_date">Время</span>
+				</div>
+			</div>
+		</div>
+		<div class="form__cooments">
+			<div class="form__comments_item_text">
+				<h4 class="title_comments" for="comment">Комментарии для Авалона</h4>
+				<textarea class="comments" name="comment" id="comment"></textarea>				
+			</div>
+			<div class="form__comments_item_text">
+				<h4 class="title_comments" for="comment">Комментарии для ТК</h4>
+				<textarea class="comments" name="comment" id="comment"></textarea>				
+			</div> 
+ 		</div>
+		<div class="footer">
+			<div class="buttons">
+				<button id = "generate" type="submit" class="btn generate btn_disabled" disabled onClick="clickButton()"><span class = "btn_text">Обновить реестр</span></button>
+				<button id = "reset" 
+						type="reset"
+						class="btn" onClick="showInputErrorRes()"><span class ="btn_text">Сбросить</span></button>
+			</div>
+		</div>
+	</form>
+	<script src="script.js"></script>
+</body>
+
+</html>
